@@ -41,7 +41,7 @@ def main():
            ,eve_charge,night_mins,night_charge,customer_calls)
   st.success('The output is {}'.format(result))
  # Make the prediction
-    result = xgb_model1.predict(voice_plan,intl_plan,
+    prediction = xgb_model1.predict(voice_plan,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls)
     prediction_prob = xgb_model1.predict_proba(voice_plan,intl_plan,
