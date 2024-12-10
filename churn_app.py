@@ -34,13 +34,21 @@ def main():
   night_mins=st.number_input("night.mins",step=0.1,min_value=65.7,max_value=336.1)
   night_charge=st.number_input("night.charge",step=0.1,min_value=2.9,max_value=15.1)
   customer_calls=st.number_input("customer.calls",step=1,min_value=0,max_value=9)
-  if st.button("predict"):
-             input_data = np.array([voice_plan,intl_plan, intl_mins, intl_calls,day_mins,day_charge, eve_mins,eve_charge,night_mins,night_charge,customer_calls]).reshape(1, -1)
-             prediction = xgb_model1.predict(input_data)
-             prediction_prob = xgb_model1.predict_proba(input_data)[0][1]  # Probability of churn
-             if prediction[0] == 1:
-                        st.error(f"Prediction: The customer is likely to churn. (Probability: {prediction_prob:.2f})")
-             else:
-                        st.success(f"Prediction: The customer is likely to stay. (Probability: {1 - prediction_prob:.2f})")
-if __name__=='__main__':
-  main()
+ # Prediction button
+if st.button("Predict Churn"):
+    # Prepare the input array
+    input_data = np.array([state,area_code,
+        account_length,voice_plan, voice_messages,intl_plan, intl_mins, intl_calls, intl_charge,
+        day_mins, day_calls, day_charge, eve_mins, eve_calls, eve_charge,
+        night_mins, night_calls, night_charge, customer_calls
+    ]).reshape(1, -1)
+
+    # Make the prediction
+    prediction = xgb_model1.predict(input_data)
+    prediction_prob = xgb_model1.predict_proba(input_data)[0][1]  # Probability of churn
+
+    # Display the result
+    if prediction[0] == 1:
+        st.error(f"Prediction: The customer is likely to churn. (Probability: {prediction_prob:.2f})")
+    else:
+        st.success(f"Prediction: The customer is likely to stay. (Probability: {1 - prediction_prob:.2f})")
