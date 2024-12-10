@@ -1,0 +1,45 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+import pickle
+
+pickle_in = open('xgb_model.pkl','rb')
+xgb_model = pickle.load(pickle_in)
+def predic(state,area_code,account_length,voice_plan,voice_messages,intl_plan,
+           intl_mins,intl_calls,intl_charge,day_mins,day_calls,day_charge,eve_mins
+           ,eve_calls,eve_charge,night_mins,night_calls,night_charge,customer_calls):
+    prediction = xgb_model.predict([[state,area_code,account_length,voice_plan,voice_messages,intl_plan,
+           intl_mins,intl_calls,intl_charge,day_mins,day_calls,day_charge,eve_mins
+           ,eve_calls,eve_charge,night_mins,night_calls,night_charge,customer_calls]])
+    print(prediction)
+    return prediction
+def main():
+  st.title("churn prediciton")
+  Text=st.selectbox("voice.plan",options=['Yes','No'])
+  if Text =='Yes':
+      voice_plan=1
+  else:
+      voice_plan=0
+  voice_messages=st.number_input("voice.messages",step=1,min_value=0,max_value=52)
+  intp=st.selectbox("intl.plan",options=['Yes','No'])
+  if intp == 'Yes':
+    intl_plan=1
+  else:
+    intl_plan=0
+  intl_mins=st.number_input("intl.mins",step=0.1,min_value=3.30,max_value=17.20)
+  intl_calls=st.number_input("intl.calls",step=1,min_value=1,max_value=20)
+  day_mins=st.number_input("day.mins",step=0.1,min_value=35.1,max_value=324.7)
+  day_charge=st.number_input("day.charge",step=1,min_value=0,max_value=1904)
+  eve_mins=st.number_input("eve.mins",step=1,min_value=0,max_value=1818)
+  eve_charge=st.number_input("eve.charge",step=0.1,min_value=5.5,max_value=28.5)
+  night_mins=st.number_input("night.mins",step=0.1,min_value=65.7,max_value=336.1)
+  night_charge=st.number_input("night.charge",step=0.1,min_value=2.9,max_value=15.1)
+  customer_calls=st.number_input("customer.calls",step=1,min_value=0,max_value=9)
+  result=""
+  if st.button("predict"):
+    result=predic(voice_plan,voice_messages,intl_plan,
+           intl_mins,intl_calls,day_mins,day_charge,eve_mins
+           ,eve_charge,night_mins,night_charge,customer_calls)
+  st.success('The output is {}'.format(result))
+if __name__=='__main__':
+  main()
