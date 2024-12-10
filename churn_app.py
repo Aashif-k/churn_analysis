@@ -5,12 +5,12 @@ import pickle
 
 pickle_in = open('xgb_model.pkl','rb')
 xgb_model = pickle.load(pickle_in)
-def predic(state,area_code,account_length,voice_plan,voice_messages,intl_plan,
-           intl_mins,intl_calls,intl_charge,day_mins,day_calls,day_charge,eve_mins
-           ,eve_calls,eve_charge,night_mins,night_calls,night_charge,customer_calls):
-    prediction = xgb_model.predict([[state,area_code,account_length,voice_plan,voice_messages,intl_plan,
-           intl_mins,intl_calls,intl_charge,day_mins,day_calls,day_charge,eve_mins
-           ,eve_calls,eve_charge,night_mins,night_calls,night_charge,customer_calls]])
+def predic(voice_plan,voice_messages,intl_plan,
+           intl_mins,intl_calls,day_mins,day_charge,eve_mins
+           ,eve_charge,night_mins,night_charge,customer_calls):
+    prediction = xgb_model.predict([[voice_plan,voice_messages,intl_plan,
+           intl_mins,intl_calls,day_mins,day_charge,eve_mins
+           ,eve_charge,night_mins,night_charge,customer_calls]])
     print(prediction)
     return prediction
 def main():
