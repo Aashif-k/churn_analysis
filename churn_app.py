@@ -40,5 +40,14 @@ def main():
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls)
   st.success('The output is {}'.format(result))
+ # Make the prediction
+    prediction = xgb_model1.predict(input_data)
+    prediction_prob = xgb_model1.predict_proba(input_data)[0][1]  # Probability of churn
+
+    # Display the result
+    if prediction[0] == 1:
+        st.error(f"Prediction: The customer is likely to churn. (Probability: {prediction_prob:.2f})")
+    else:
+        st.success(f"Prediction: The customer is likely to stay. (Probability: {1 - prediction_prob:.2f})")
 if __name__=='__main__':
   main()
