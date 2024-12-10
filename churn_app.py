@@ -4,11 +4,11 @@ import numpy as np
 import pickle
 
 pickle_in = open('xgb_model.pkl','rb')
-xgb_model = pickle.load(pickle_in)
+xgb_model1 = pickle.load(pickle_in)
 def predic(voice_plan,voice_messages,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls):
-    prediction = xgb_model.predict([[voice_plan,voice_messages,intl_plan,
+    prediction = xgb_model1.predict([[voice_plan,voice_messages,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls]])
     print(prediction)
