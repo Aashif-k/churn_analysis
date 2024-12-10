@@ -36,7 +36,7 @@ def main():
   customer_calls=st.number_input("customer.calls",step=1,min_value=0,max_value=9)
   result=""
   if st.button("predict"):
-    result=xgb_model1.predict(voice_plan,intl_plan,
+    result=predic(voice_plan,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls)
   st.success('The output is {}'.format(result))
