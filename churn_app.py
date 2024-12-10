@@ -5,10 +5,10 @@ import pickle
 
 pickle_in = open('xgb_model1.pkl','rb')
 xgb_model1 = pickle.load(pickle_in)
-def predic(voice_plan,voice_messages,intl_plan,
+def predic(voice_plan,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls):
-    prediction = xgb_model1.predict([[voice_plan,voice_messages,intl_plan,
+    prediction = xgb_model1.predict([[voice_plan,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls]])
     print(prediction)
@@ -20,7 +20,6 @@ def main():
       voice_plan=1
   else:
       voice_plan=0
-  voice_messages=st.number_input("voice.messages",step=1,min_value=0,max_value=52)
   intp=st.selectbox("intl.plan",options=['Yes','No'])
   if intp == 'Yes':
     intl_plan=1
@@ -37,7 +36,7 @@ def main():
   customer_calls=st.number_input("customer.calls",step=1,min_value=0,max_value=9)
   result=""
   if st.button("predict"):
-    result=predic(voice_plan,voice_messages,intl_plan,
+    result=predic(voice_plan,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls)
   st.success('The output is {}'.format(result))
