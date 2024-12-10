@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 
-pickle_in = open('xgb_model.pkl','rb')
+pickle_in = open('xgb_model1.pkl','rb')
 xgb_model1 = pickle.load(pickle_in)
 def predic(voice_plan,voice_messages,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
