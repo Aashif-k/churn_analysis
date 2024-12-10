@@ -38,7 +38,7 @@ def main():
   if st.button("predict"):
              input_data = np.array([voice_plan,intl_plan, intl_mins, intl_calls,day_mins,day_charge, eve_mins,eve_charge,night_mins,night_charge,customer_calls]).reshape(1, -1)
              prediction = xgb_model1.predict(input_data)
-             prediction_prob = xgb_model1.predict_proba(input_data)[1][0]  # Probability of churn
+             prediction_prob = xgb_model1.predict_proba(input_data)[0][1]  # Probability of churn
              if prediction[1] == 0:
                         st.error(f"Prediction: The customer is likely to churn. (Probability: {prediction_prob:.2f})")
              else:
