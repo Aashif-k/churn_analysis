@@ -7,10 +7,11 @@ page_pg_img="""
 [data-testid="stAppViewContainer"]{
 background-color: #e5e5f7;
 opacity: 0.8;
-background-image:"css-pattern-by-magicpattern.png";
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #444cf755, #444cf7 );
 }
 </style>
 """
+st.markdown(page_pg_img,unsafe_allow_html=True)
 pickle_in = open('xgb_model1.pkl','rb')
 xgb_model1 = pickle.load(pickle_in)
 def predic(voice_plan,intl_plan,
@@ -23,6 +24,7 @@ def predic(voice_plan,intl_plan,
     return prediction
 def main():
   st.title("churn prediciton")
+  st.markdown(page_pg_img,unsafe_allow_html=True)
   Text=st.selectbox("voice.plan",options=['Yes','No'])
   if Text =='Yes':
       voice_plan=1
