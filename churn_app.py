@@ -51,11 +51,12 @@ def main():
            ,eve_charge,night_mins,night_charge,customer_calls)
    st.markdown('''
              <style>
-  .element-container {
-      background-color: blue;
-      opacity: 1;
-     }  </style>
-      ''', unsafe_allow_html=True)
+             .element-container {
+             background-color: blue;
+             opacity: 1;
+             }
+             </style>
+             ''', unsafe_allow_html=True)
   st.success('The output is {}'.format(result))
 if __name__=='__main__':
   main()
