@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
@@ -49,6 +49,6 @@ def main():
     result=predic(voice_plan,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls)
-st.success('The output is {}'.format(result))
+  st.success('The output is {}'.format(result))
 if __name__=='__main__':
   main()
