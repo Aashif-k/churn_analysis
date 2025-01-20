@@ -2,6 +2,14 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+head_css="""
+<style>
+[data-testid="stHeader"]{
+background-color: #889E73;
+opacity: 1.0;
+}
+</style>
+"""
 page_pg_img="""
 <style>
 [data-testid="stAppViewContainer"]{
@@ -31,6 +39,7 @@ def predic(voice_plan,intl_plan,
     return prediction
 def main():
   st.title(":blue[churn analysis]")
+  st.markdown(head_css,unsafe_allow_html=True)
   st.markdown(page_pg_img,unsafe_allow_html=True)
   Text=st.selectbox("voice.plan",options=['Yes','No'])
   if Text =='Yes':
