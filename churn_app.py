@@ -15,6 +15,7 @@ out_cs="""
 <style>
 [data-testid="stAlertContainer"]{
 background-color: #DA2400;
+color: blue;
 opacity: 0.4;
 }
 </style>
