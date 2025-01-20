@@ -49,6 +49,13 @@ def main():
     result=predic(voice_plan,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls)
-  st.success('The output is {}'.format(result))
+ st.markdown('''
+             <style>
+  .element-container {
+      background-color: blue;
+      opacity: 1;
+  }  </style>
+  ''', unsafe_allow_html=True)
+st.success('The output is {}'.format(result))
 if __name__=='__main__':
   main()
