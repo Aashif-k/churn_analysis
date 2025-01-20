@@ -7,7 +7,7 @@ page_pg_img="""
 [data-testid="stAppViewContainer"]{
 background-color: #e5e5f7;
 opacity: 0.8;
-background-image:css-pattern-by-magicpattern.png;
+background-image:"css-pattern-by-magicpattern.png";
 }
 </style>
 """
