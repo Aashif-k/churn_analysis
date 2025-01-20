@@ -49,8 +49,7 @@ def main():
     result=predic(voice_plan,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls)
-  st.success('The output is {}'.format(result))
-def main(): 
+  st.success('The output is {}'.format(result)) 
  with st.container():
             st.markdown('''
             <style>
