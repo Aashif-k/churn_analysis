@@ -11,7 +11,6 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e
 }
 </style>
 """
-st.markdown(page_pg_img,unsafe_allow_html=True)
 pickle_in = open('xgb_model1.pkl','rb')
 xgb_model1 = pickle.load(pickle_in)
 def predic(voice_plan,intl_plan,
@@ -23,7 +22,7 @@ def predic(voice_plan,intl_plan,
     print(prediction)
     return prediction
 def main():
-  st.title("churn prediciton",text_colour="Red")
+  st.title(f"churn prediciton : blue")
   st.markdown(page_pg_img,unsafe_allow_html=True)
   Text=st.selectbox("voice.plan",options=['Yes','No'])
   if Text =='Yes':
