@@ -2,7 +2,12 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-
+page_pg_img="""
+<style>
+background-color: #e5e5f7;
+opacity: 0.8;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #444cf755, #444cf7 );
+</style>
 pickle_in = open('xgb_model1.pkl','rb')
 xgb_model1 = pickle.load(pickle_in)
 def predic(voice_plan,intl_plan,
