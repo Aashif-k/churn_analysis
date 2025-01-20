@@ -14,7 +14,7 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e
 out_cs="""
 <style>
 [data-testid="stAlertContainer"]{
-background-color: #ffff00;
+background-color: #DA2400;
 opacity: 0.4;
 }
 </style>
