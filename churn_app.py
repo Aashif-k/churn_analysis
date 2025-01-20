@@ -11,6 +11,14 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e
 }
 </style>
 """
+out_cs="""
+<style>
+[data-testid="stMarkdownContainer"]{
+background-color: #ffff00;
+opacity: 0.4;
+}
+</style>
+"""
 pickle_in = open('xgb_model1.pkl','rb')
 xgb_model1 = pickle.load(pickle_in)
 def predic(voice_plan,intl_plan,
@@ -49,6 +57,7 @@ def main():
     result=predic(voice_plan,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls)
+  st.markdown(out_cs,unsafe_allow_html=True)
   st.success('The output is {}'.format(result)) 
 if __name__=='__main__':
   main()
