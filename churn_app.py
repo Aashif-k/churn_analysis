@@ -22,7 +22,7 @@ def predic(voice_plan,intl_plan,
     print(prediction)
     return prediction
 def main():
-  st.title(f"churn prediciton : blue")
+  st.title(":blue[churn analysis]")
   st.markdown(page_pg_img,unsafe_allow_html=True)
   Text=st.selectbox("voice.plan",options=['Yes','No'])
   if Text =='Yes':
