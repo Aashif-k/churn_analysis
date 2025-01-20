@@ -7,7 +7,7 @@ page_pg_img="""
 [data-testid="stAppViewContainer"]{
 background-color: #e5e5f7;
 opacity: 0.8;
-background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #444cf755, #444cf7 );
+background-image:css-pattern-by-magicpattern.png;
 }
 </style>
 """
