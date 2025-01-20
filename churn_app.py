@@ -5,9 +5,8 @@ import pickle
 page_pg_img="""
 <style>
 [data-testid="stAppViewContainer"]{
-background-color: #000000;
-opacity: 0.5;
-background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #444cf755, #444cf7 );
+background-color: #889E73;
+opacity: 0.8;
 }
 </style>
 """
