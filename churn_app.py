@@ -44,7 +44,7 @@ def main():
   night_charge=st.number_input("night.charge",step=0.1,min_value=2.9,max_value=15.1)
   customer_calls=st.number_input("customer.calls",step=1,min_value=0,max_value=9)
   result=""
-  if st.button("predict"):
+  if st.middle.button("predict"):
     result=predic(voice_plan,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls)
