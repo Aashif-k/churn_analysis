@@ -49,7 +49,7 @@ def main():
       voice_plan=1
   else:
       voice_plan=0
-  intp=st.selectbox("intl.plan",options=['Yes','No'])
+  intp=st.sidebar.selectbox("intl.plan",options=['Yes','No'])
   if intp == 'Yes':
     intl_plan=1
   else:
