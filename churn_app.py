@@ -50,6 +50,15 @@ opacity: 1.0;
 }
 </style>
 """
+st.markdown(
+    """
+    <style>
+        .stProgress > div > div > div > div {
+            background-color: green;
+        }
+    </style>""",
+    unsafe_allow_html=True,
+)
 pickle_in = open('xgb_model1.pkl','rb')
 xgb_model1 = pickle.load(pickle_in)
 def predic(voice_plan,intl_plan,
