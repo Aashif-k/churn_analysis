@@ -15,6 +15,8 @@ page_pg_img="""
 [data-testid="stAppViewContainer"]{
 position: Relative;
 background-image: url("https://media2.giphy.com/media/Ent2j55lyQipa/giphy.webp?cid=790b7611q8mr4szt4860d1x3tx26q292zzb4lild33wd5o4d&ep=v1_gifs_search&rid=giphy.webp&ct=g");
+width: 100%;
+height: 100%;
 background-size: cover;
 }
 </style>
