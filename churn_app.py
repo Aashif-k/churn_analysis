@@ -4,6 +4,14 @@ import numpy as np
 import pickle
 head_css="""
 <style>
+[data-testid="stBaseButton-headerNoPadding"]{
+background-color: #889E73;
+opacity: 1.0;
+}
+</style>
+"""
+head_css="""
+<style>
 [data-testid="stHeader"]{
 background-color: #889E73;
 opacity: 1.0;
