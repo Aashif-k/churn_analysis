@@ -50,13 +50,15 @@ opacity: 1.0;
 }
 </style>
 """
-progess_bar="""
-<style>
-[data-testid="stProgress"] {
-background-color: green;
-}
-</style>
-"""
+st.markdown(
+    """
+    <style>
+        .stProgress > div > div > div > div {
+            background-color: green;
+        }
+    </style>""",
+    unsafe_allow_html=True,
+)
 pickle_in = open('xgb_model1.pkl','rb')
 xgb_model1 = pickle.load(pickle_in)
 def predic(voice_plan,intl_plan,
@@ -73,7 +75,6 @@ def main():
   st.markdown(sidebar_css,unsafe_allow_html=True)
   st.markdown(head_css,unsafe_allow_html=True)
   st.markdown(page_pg_img,unsafe_allow_html=True)
-  st.markdown(progess_bar,unsafe_allow_html=True)
   with st.sidebar:
              st.title("Provide values")
              Text=st.selectbox("voice.plan",options=['Yes','No'])
@@ -102,7 +103,7 @@ def main():
 
   for percent_complete in range(100):
       my_bar.progress(percent_complete + 1, text=progress_text)
-      time.sleep(1.0)
+      time.sleep(0.1)
       my_bar.empty()
   if m.button("predict"):
     result=predic(voice_plan,intl_plan,
