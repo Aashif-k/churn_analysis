@@ -52,7 +52,7 @@ opacity: 1.0;
 """
 progess_bar="""
 <style>
-[data-testid="stProgress > div > div > div > div"] {
+[data-testid="stProgress"] {
 background-color: green;
 }
 </style>
