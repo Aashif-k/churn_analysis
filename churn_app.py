@@ -57,6 +57,7 @@ def main():
   st.markdown(head_css,unsafe_allow_html=True)
   st.markdown(page_pg_img,unsafe_allow_html=True)
   with st.sidebar:
+             st.title("Provide values")
              Text=st.selectbox("voice.plan",options=['Yes','No'])
              if Text =='Yes':
                         voice_plan=1
