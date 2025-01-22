@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 sidebar_css="""
 <style>
-[data-testid="stBaseButton-headerNoPadding"]{
+[data-testid="stSidebarCollapsedControl"]{
 background-color: #000000;
 opacity: 1.0;
 }
