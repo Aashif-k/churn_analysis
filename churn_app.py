@@ -18,6 +18,7 @@ background-image: url("https://media2.giphy.com/media/Ent2j55lyQipa/giphy.webp?c
 width: 100%;
 height: 100%;
 background-size: contain;
+background-repeat: no-repeat;
 }
 </style>
 """
