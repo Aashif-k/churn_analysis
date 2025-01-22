@@ -17,8 +17,7 @@ position: Relative;
 background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDY1Z2I5eGtyNmk0ODQ3ZXR2MDZ4OHFlcnQ0cWFrdno3b2RkeTQxcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WGOlH30rfQWUo/giphy.gif");
 width: 100%;
 height: 100%;
-background-size: inherit;
-background-repeat: no-repeat;
+background-size: auto auto;
 }
 </style>
 """
