@@ -94,15 +94,13 @@ def main():
 
   for percent_complete in range(100):
       time.sleep(0.01)
-      my_bar.progress(percent_complete + 1, text=progress_text)
+      my_bar.progress(percent_complete + 10, text=progress_text)
       time.sleep(1)
       my_bar.empty()
   if m.button("predict"):
     result=predic(voice_plan,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls)
-  with st.spinner('Wait for it...'):
-       time.sleep(5)
   st.markdown(out_cs,unsafe_allow_html=True)
   st.success('The output is {}'.format(result)) 
 if __name__=='__main__':
