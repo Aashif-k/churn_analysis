@@ -62,20 +62,20 @@ def main():
                         voice_plan=1
              else:
                         voice_plan=0
-  intp=st.sidebar.selectbox("intl.plan",options=['Yes','No'])
-  if intp == 'Yes':
-    intl_plan=1
-  else:
-    intl_plan=0
-  intl_mins=st.number_input("intl.mins",step=0.1,min_value=3.30,max_value=17.20)
-  intl_calls=st.number_input("intl.calls",step=1,min_value=1,max_value=20)
-  day_mins=st.number_input("day.mins",step=0.1,min_value=35.1,max_value=324.7)
-  day_charge=st.number_input("day.charge",step=1,min_value=0,max_value=1904)
-  eve_mins=st.number_input("eve.mins",step=1,min_value=0,max_value=1818)
-  eve_charge=st.number_input("eve.charge",step=0.1,min_value=5.5,max_value=28.5)
-  night_mins=st.number_input("night.mins",step=0.1,min_value=65.7,max_value=336.1)
-  night_charge=st.number_input("night.charge",step=0.1,min_value=2.9,max_value=15.1)
-  customer_calls=st.number_input("customer.calls",step=1,min_value=0,max_value=9)
+             intp=st.sidebar.selectbox("intl.plan",options=['Yes','No'])
+             if intp == 'Yes':
+                        intl_plan=1
+             else:
+                        intl_plan=0
+             intl_mins=st.number_input("intl.mins",step=0.1,min_value=3.30,max_value=17.20)
+             intl_calls=st.number_input("intl.calls",step=1,min_value=1,max_value=20)
+             day_mins=st.number_input("day.mins",step=0.1,min_value=35.1,max_value=324.7)
+             day_charge=st.number_input("day.charge",step=1,min_value=0,max_value=1904)
+             eve_mins=st.number_input("eve.mins",step=1,min_value=0,max_value=1818)
+             eve_charge=st.number_input("eve.charge",step=0.1,min_value=5.5,max_value=28.5)
+             night_mins=st.number_input("night.mins",step=0.1,min_value=65.7,max_value=336.1)
+             night_charge=st.number_input("night.charge",step=0.1,min_value=2.9,max_value=15.1)
+             customer_calls=st.number_input("customer.calls",step=1,min_value=0,max_value=9)
   result=""
   l,ll,lm,m,rm,lr,r = st.columns(7)
   if m.button("predict"):
