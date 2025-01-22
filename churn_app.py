@@ -10,6 +10,17 @@ opacity: 1.0;
 }
 </style>
 """
+side_css="""
+<style>
+[data-testid="stSidebar"]{
+position: Relative;
+background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDY1Z2I5eGtyNmk0ODQ3ZXR2MDZ4OHFlcnQ0cWFrdno3b2RkeTQxcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WGOlH30rfQWUo/giphy.gif");
+width: 100%;
+height: 100%;
+background-size: auto auto;
+}
+</style>
+"""
 page_pg_img="""
 <style>
 [data-testid="stAppViewContainer"]{
@@ -42,6 +53,7 @@ def predic(voice_plan,intl_plan,
     return prediction
 def main():
   st.title(":blue[churn analysis]")
+  st.markdown(side_css,unsafe_allow_html=True)
   st.markdown(head_css,unsafe_allow_html=True)
   st.markdown(page_pg_img,unsafe_allow_html=True)
   Text=st.selectbox("voice.plan",options=['Yes','No'])
