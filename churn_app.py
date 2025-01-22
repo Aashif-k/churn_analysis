@@ -13,8 +13,13 @@ opacity: 1.0;
 page_pg_img="""
 <style>
 [data-testid="stAppViewContainer"]{
-background-color: #889E73;
-opacity: 0.8;
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 }
 </style>
 """
