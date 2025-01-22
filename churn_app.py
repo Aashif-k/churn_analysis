@@ -14,7 +14,7 @@ page_pg_img="""
 <style>
 [data-testid="stAppViewContainer"]{
 position: Relative;
-background-image: url("https://img.freepik.com/free-photo/newspaper-background-concept_23-2149501639.jpg?t=st=1737541856~exp=1737545456~hmac=1920514c5558ac13db21c9fd536ac3dd59bfecd149946cd1c62233789e01b2ee&w=996");
+background-image: url("https://media2.giphy.com/media/Ent2j55lyQipa/giphy.webp?cid=790b7611q8mr4szt4860d1x3tx26q292zzb4lild33wd5o4d&ep=v1_gifs_search&rid=giphy.webp&ct=g");
 background-size: cover;
 }
 </style>
