@@ -95,7 +95,6 @@ def main():
            ,eve_charge,night_mins,night_charge,customer_calls)
   with st.spinner('Wait for it...'):
        time.sleep(5)
-  st.success("Done!")
   st.markdown(out_cs,unsafe_allow_html=True)
   st.success('The output is {}'.format(result)) 
 if __name__=='__main__':
