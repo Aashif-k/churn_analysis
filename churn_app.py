@@ -57,11 +57,11 @@ def main():
   st.markdown(head_css,unsafe_allow_html=True)
   st.markdown(page_pg_img,unsafe_allow_html=True)
   with st.sidebar:
-  Text=st.selectbox("voice.plan",options=['Yes','No'])
-  if Text =='Yes':
-      voice_plan=1
-  else:
-      voice_plan=0
+             Text=st.selectbox("voice.plan",options=['Yes','No'])
+             if Text =='Yes':
+                        voice_plan=1
+             else:
+                        voice_plan=0
   intp=st.sidebar.selectbox("intl.plan",options=['Yes','No'])
   if intp == 'Yes':
     intl_plan=1
