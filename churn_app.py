@@ -14,7 +14,7 @@ page_pg_img="""
 <style>
 [data-testid="stAppViewContainer"]{
 position: Relative;
-background-image: url("https://media2.giphy.com/media/Ent2j55lyQipa/giphy.webp?cid=790b7611q8mr4szt4860d1x3tx26q292zzb4lild33wd5o4d&ep=v1_gifs_search&rid=giphy.webp&ct=g");
+background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDY1Z2I5eGtyNmk0ODQ3ZXR2MDZ4OHFlcnQ0cWFrdno3b2RkeTQxcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WGOlH30rfQWUo/giphy.gif");
 width: 100%;
 height: 100%;
 background-size: contain;
