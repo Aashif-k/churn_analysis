@@ -56,7 +56,7 @@ def main():
   st.markdown(side_css,unsafe_allow_html=True)
   st.markdown(head_css,unsafe_allow_html=True)
   st.markdown(page_pg_img,unsafe_allow_html=True)
-  st.sidebar(
+st.sidebar()
   Text=st.selectbox("voice.plan",options=['Yes','No'])
   if Text =='Yes':
       voice_plan=1
@@ -76,7 +76,6 @@ def main():
   night_mins=st.number_input("night.mins",step=0.1,min_value=65.7,max_value=336.1)
   night_charge=st.number_input("night.charge",step=0.1,min_value=2.9,max_value=15.1)
   customer_calls=st.number_input("customer.calls",step=1,min_value=0,max_value=9)
-           )
   result=""
   l,ll,lm,m,rm,lr,r = st.columns(7)
   if m.button("predict"):
