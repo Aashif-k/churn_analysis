@@ -13,7 +13,7 @@ opacity: 1.0;
 page_pg_img="""
 <style>
 [data-testid="stAppViewContainer"]{
-background-image: url("https://drive.google.com/file/d/1UfwIw_LB-OJw3zTuaL8mKCoZ502Xor3p/view?usp=drive_link");
+background-image: url("https://github.com/Aashif-k/churn_analysis/blob/main/newspaper-background-concept.jpg");
 background-size: cover;
 }
 </style>
