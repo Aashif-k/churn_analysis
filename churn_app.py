@@ -25,7 +25,7 @@ page_pg_img="""
 <style>
 [data-testid="stAppViewContainer"]{
 position: Relative;
-background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDY1Z2I5eGtyNmk0ODQ3ZXR2MDZ4OHFlcnQ0cWFrdno3b2RkeTQxcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WGOlH30rfQWUo/giphy.gif");
+background-image: url("https://img.freepik.com/free-photo/newspaper-background-concept_23-2149501639.jpg?t=st=1737541856~exp=1737545456~hmac=1920514c5558ac13db21c9fd536ac3dd59bfecd149946cd1c62233789e01b2ee&w=996");
 width: 100%;
 height: 100%;
 background-size: auto auto;
