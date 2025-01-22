@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import time
 import pickle
 sidebar_css="""
 <style>
@@ -92,6 +93,9 @@ def main():
     result=predic(voice_plan,intl_plan,
            intl_mins,intl_calls,day_mins,day_charge,eve_mins
            ,eve_charge,night_mins,night_charge,customer_calls)
+  with st.spinner('Wait for it...'):
+       time.sleep(5)
+  st.success("Done!")
   st.markdown(out_cs,unsafe_allow_html=True)
   st.success('The output is {}'.format(result)) 
 if __name__=='__main__':
