@@ -102,7 +102,7 @@ def main():
 
   for percent_complete in range(100):
       my_bar.progress(percent_complete + 1, text=progress_text)
-      time.sleep(0.1)
+      time.sleep(1.0)
       my_bar.empty()
   if m.button("predict"):
     result=predic(voice_plan,intl_plan,
