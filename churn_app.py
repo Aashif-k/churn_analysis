@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-head_css="""
+sidebar_css="""
 <style>
 [data-testid="stBaseButton-headerNoPadding"]{
 background-color: #889E73;
@@ -62,6 +62,7 @@ def predic(voice_plan,intl_plan,
 def main():
   st.title(":blue[churn analysis]")
   st.markdown(side_css,unsafe_allow_html=True)
+  st.markdown(sidebar_css,unsafe_allow_html=True)
   st.markdown(head_css,unsafe_allow_html=True)
   st.markdown(page_pg_img,unsafe_allow_html=True)
   with st.sidebar:
