@@ -5,7 +5,7 @@ import pickle
 sidebar_css="""
 <style>
 [data-testid="stBaseButton-headerNoPadding"]{
-background-color: #889E73;
+background-color: #000000;
 opacity: 1.0;
 }
 </style>
